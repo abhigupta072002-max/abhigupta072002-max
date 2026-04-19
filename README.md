@@ -51,16 +51,7 @@
 ✔ Drug Safety & Development  
 ✔ Healthcare Analytics  
 
----
 
-## 📊 GitHub Activity  
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=abhigupta072002-max&show_icons=true&theme=tokyonight&hide_border=true" height="160"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=abhigupta072002-max&theme=tokyonight&hide_border=true" height="160"/>
-</p>
-
----
 
 ## 🌐 Connect With Me  
 
