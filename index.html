@@ -1,100 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abhishek Kumar | Clinical Research</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abhishek Kumar | Clinical Research</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #e2e8f0;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
 
-    header {
-      text-align: center;
-      padding: 40px 20px;
-      background: linear-gradient(90deg, #0A66C2, #1ABC9C);
-    }
+body {
+  background: #0f172a;
+  color: #e2e8f0;
+  overflow-x: hidden;
+}
 
-    header h1 {
-      margin: 0;
-      font-size: 36px;
-    }
+/* NAVBAR */
+nav {
+  position: fixed;
+  width: 100%;
+  background: rgba(15, 23, 42, 0.9);
+  padding: 15px;
+  text-align: center;
+  z-index: 1000;
+}
 
-    header p {
-      margin-top: 10px;
-      font-size: 18px;
-    }
+nav a {
+  margin: 0 15px;
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
+/* HERO */
+header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #0A66C2, #1ABC9C, #9333ea, #06b6d4);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+}
 
-    h2 {
-      border-bottom: 2px solid #1ABC9C;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
-    }
+@keyframes gradientMove {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
 
-    .skills span {
-      display: inline-block;
-      background: #1e293b;
-      padding: 8px 15px;
-      margin: 5px;
-      border-radius: 20px;
-      font-size: 14px;
-    }
+header h1 {
+  font-size: 45px;
+  animation: fadeIn 2s ease;
+}
 
-    .card {
-      background: #1e293b;
-      padding: 20px;
-      border-radius: 10px;
-      margin-top: 10px;
-    }
+header p {
+  margin-top: 10px;
+  font-size: 20px;
+  opacity: 0.9;
+}
 
-    .links a {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 20px;
-      background: #0A66C2;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #020617;
-      margin-top: 40px;
-    }
-  </style>
+/* SECTION */
+section {
+  padding: 80px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #38bdf8;
+}
+
+.card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* SKILLS */
+.skills span {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  background: #0ea5e9;
+  transition: 0.3s;
+}
+
+.skills span:hover {
+  background: #22c55e;
+}
+
+/* BUTTONS */
+.links a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background: #0ea5e9;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.links a:hover {
+  background: #22c55e;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #020617;
+}
+
+/* SCROLL ANIMATION */
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
 </head>
 
 <body>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#learning">Learning</a>
+  <a href="#contact">Contact</a>
+</nav>
 
 <header>
   <h1>Abhishek Kumar</h1>
   <p>M.Sc. Clinical Research | Registered Pharmacist | GPAT Rank 955</p>
 </header>
 
-<section>
+<section id="about" class="hidden">
   <h2>About Me</h2>
   <div class="card">
-    <p>
-      I am pursuing M.Sc. in Clinical Research at BRIC-THSTI. 
-      I have a background in pharmacy and experience as a medical coder. 
-      I am interested in clinical trials, regulatory affairs, and healthcare data analysis.
-    </p>
+    I am pursuing M.Sc. in Clinical Research at BRIC-THSTI.  
+    I have a background in pharmacy and experience as a medical coder.  
+    Passionate about clinical trials, regulatory affairs, and healthcare data analysis.
   </div>
 </section>
 
-<section>
+<section id="skills" class="hidden">
   <h2>Skills</h2>
   <div class="skills">
     <span>Clinical Research</span>
@@ -105,32 +179,18 @@
   </div>
 </section>
 
-<section>
+<section id="learning" class="hidden">
   <h2>Currently Learning</h2>
   <div class="card">
-    <ul>
-      <li>Biostatistics & Data Interpretation</li>
-      <li>ICH Guidelines, IND, NDA</li>
-      <li>Clinical Trial Design</li>
-      <li>Excel → Python</li>
-    </ul>
+    • Biostatistics & Data Interpretation <br>
+    • ICH Guidelines, IND, NDA <br>
+    • Clinical Trial Design <br>
+    • Excel → Python
   </div>
 </section>
 
-<section>
-  <h2>Career Focus</h2>
-  <div class="card">
-    <ul>
-      <li>Clinical Research & Trials</li>
-      <li>Regulatory Affairs</li>
-      <li>Drug Development</li>
-      <li>Healthcare Data Analysis</li>
-    </ul>
-  </div>
-</section>
-
-<section>
-  <h2>Connect With Me</h2>
+<section id="contact" class="hidden">
+  <h2>Connect</h2>
   <div class="links">
     <a href="https://www.linkedin.com/in/abhishek-pharmacist" target="_blank">LinkedIn</a>
     <a href="mailto:abhigupta072002@gmail.com">Email</a>
@@ -139,8 +199,20 @@
 </section>
 
 <footer>
-  <p>© 2026 Abhishek Kumar | Clinical Research Portfolio</p>
+  © 2026 Abhishek Kumar
 </footer>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+});
+
+document.querySelectorAll('.hidden').forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
